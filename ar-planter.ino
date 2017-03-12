@@ -49,7 +49,7 @@ void sendSensorData(char receivedChar){
   root["humidity"] = getHumidity();
   root["temperature"] = getTemperature();
   root.set("moisture_1", getMoisture(0), 6);
-  root.set("moisture_2", getMoisture(0), 6);
+  root.set("moisture_2", getMoisture(1), 6);
   root.set("char", (String) receivedChar);
 
   root.printTo(Serial);
